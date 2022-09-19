@@ -1,0 +1,7 @@
+@mixin multi-ellipsis($count: 1) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $count;
+  -webkit-box-orient: vertical;
+}

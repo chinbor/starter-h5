@@ -1,0 +1,37 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "module": "ESNext",
+    "target": "es2016",
+    "lib": ["DOM", "ESNext"],
+    "strict": true,
+    "jsx": "preserve",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "noUnusedLocals": true,
+    "strictNullChecks": true,
+    "allowJs": true,
+    "forceConsistentCasingInFileNames": true,
+    "types": [
+      "vite/client",
+    ],
+    "paths": {
+      "~/*": ["src/*"]
+    }
+  },
+  "include": [
+    "mock/**/*.ts",
+    "tests/**/*.ts",
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "vite.config.ts",
+    "auto-imports.d.ts",
+    "components.d.ts",
+    "shims.d.ts",
+  ],
+  "exclude": ["dist", "node_modules", "commitlint.config.js"]
+}

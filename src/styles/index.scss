@@ -1,0 +1,56 @@
+@import "./animate.scss";
+@import "./mixin.scss";
+@import "./var.scss";
+
+html {
+  background-color: $primary-color;
+}
+
+// 一些常用的flex布局类（直接元素添加这些类名就好）
+.flex {
+  display: flex;
+}
+
+.flex-justify-center {
+  display: flex;
+  justify-content: center;
+}
+
+.flex-align-center {
+  display: flex;
+  align-items: center;
+}
+
+.flex-center-horizontal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-center-vertical {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.zo-tabbar {
+  margin-bottom: $tabbar-height;
+}
+
+// ===================== 修改 vantui样式
+.van-empty__description {
+  margin-top: 0 !important;
+}
+
+.van-empty__image {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+// =====================================
+
+.zo-empty-img {
+  width: 120px;
+  height: 120px;
+}
