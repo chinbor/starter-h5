@@ -5,7 +5,7 @@
 ## 一、 前置操作
 
 1. `pnpm i`
-2. `pnpm prepare` 一般而言当你install后会自动执行
+2. `pnpm prepare` 一般而言当你 `install` 后会自动执行，但是咱们这里使用 `create-cp` 创建的项目不存在 git 记录（我进行了删除），所以需要先执行 `git init` 初始化代码仓库
 3. `pnpm exec husky add .husky/pre-commit 'pnpm exec lint-staged'`
 4. `pnpm exec husky add .husky/commit-msg 'pnpm exec commitlint --edit "$1"'`
 
