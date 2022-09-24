@@ -1,6 +1,6 @@
 # starter-h5
 
-> 在线预览地址：https://chinbor.netlify.app/#/home
+> 在线预览地址：https://chinbor.netlify.app
 
 ## 一、 前置操作
 
