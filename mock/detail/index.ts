@@ -41,7 +41,7 @@ const collections: Collections = {
     isSoldOut: false,
     advanceTime: null,
     normalTime: 1663646400000,
-    modelUrls: ['./models/muzhi-token.glb'],
+    modelUrls: ['/models/muzhi-token.glb'],
     name: '三国武将-张飞',
     numbers: 10000,
     imgs: [
@@ -80,7 +80,7 @@ const collections: Collections = {
     isSoldOut: false,
     advanceTime: null,
     normalTime: 1663646400000,
-    modelUrls: ['./models/jinshu-token.glb'],
+    modelUrls: ['/models/jinshu-token.glb'],
     name: '三国武将-张飞',
     numbers: 10000,
     imgs: [
@@ -119,7 +119,7 @@ const collections: Collections = {
     isSoldOut: false,
     advanceTime: null,
     normalTime: 1663646400000,
-    modelUrls: ['./models/yuzhi-token.glb'],
+    modelUrls: ['/models/yuzhi-token.glb'],
     name: '三国武将-张飞',
     numbers: 10000,
     imgs: [
