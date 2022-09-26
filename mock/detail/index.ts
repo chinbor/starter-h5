@@ -28,6 +28,7 @@ export interface CollectionsItem {
   purchaseNotes: string
   releaseNotes: ReleaseNotes
   cover: string
+  type: number
 }
 
 interface Collections {
@@ -42,6 +43,7 @@ const collections: Collections = {
     advanceTime: null,
     normalTime: 1663646400000,
     modelUrls: ['/models/muzhi-token.glb'],
+    type: 2,
     name: '三国武将-张飞',
     numbers: 10000,
     imgs: [
@@ -81,6 +83,7 @@ const collections: Collections = {
     advanceTime: null,
     normalTime: 1663646400000,
     modelUrls: ['/models/jinshu-token.glb'],
+    type: 2,
     name: '三国武将-张飞',
     numbers: 10000,
     imgs: [
@@ -122,6 +125,7 @@ const collections: Collections = {
     modelUrls: ['/models/yuzhi-token.glb'],
     name: '三国武将-张飞',
     numbers: 10000,
+    type: 2,
     imgs: [
       'https://images.pexels.com/photos/8051987/pexels-photo-8051987.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
       'https://images.pexels.com/photos/10311898/pexels-photo-10311898.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',

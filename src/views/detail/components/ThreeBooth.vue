@@ -19,6 +19,7 @@ import { db } from '~/db'
 const screenDom = ref<HTMLElement | null>(null)
 const loading = ref<boolean>(true)
 const detail = ref<CollectionsItem | null>(null)
+const showImg = ref<boolean>(false)
 
 let scene: THREE.Scene
 let group: THREE.Group
@@ -237,9 +238,11 @@ function render(_time?: number) {
   renderer!.render(scene!, camera!)
 }
 
-async function init(data: CollectionsItem) {
-  detail.value = data
+function initImg() {
+  showImg.value = true
+}
 
+async function init3d() {
   await nextTick()
 
   start()
@@ -253,6 +256,21 @@ async function init(data: CollectionsItem) {
   updateTextureEncoding()
 
   render()
+}
+
+const stragies: Record<number, () => void> = {
+  1: initImg,
+  2: init3d,
+}
+
+async function init(data: CollectionsItem) {
+  detail.value = data
+
+  stragies[detail.value?.type]()
+}
+
+const imgLoaded = () => {
+  loading.value = false
 }
 
 onBeforeUnmount(() => {
@@ -271,6 +289,9 @@ defineExpose({
       <div class="bounce1" />
       <div class="bounce2" />
       <div class="bounce3" />
+    </div>
+    <div v-if="showImg" class="container">
+      <zo-img :src="detail.modelUrls[0]" bg-color="transparent" @load="imgLoaded" />
     </div>
     <div class="desc">
       <div class="name">
@@ -339,6 +360,15 @@ defineExpose({
   height: 100%;
   background: url('~/assets/images/collection-blood-bg.png') no-repeat center;
   background-size: 100%;
+
+  .container {
+    width: 128.8px * 1.5;
+    height: 228.8px * 1.5;
+    position: absolute;
+    left: 50%;
+    top: 150px;
+    transform: translateX(-50%);
+  }
 
   .desc {
     position: absolute;
