@@ -10,6 +10,10 @@ export interface CollectionsItem {
   isSoldOut: boolean
   time: number
   url: string
+  type: number // 1：图片 2：3d
+  name: string
+  numbers: number
+  price: number
 }
 
 export interface CollectionsResponse {

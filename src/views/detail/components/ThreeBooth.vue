@@ -105,17 +105,17 @@ function updateTextureEncoding() {
     if (child.isMesh) {
       // @ts-expect-error let me do it
       if (child.material.map)
-      // @ts-expect-error let me do it
+        // @ts-expect-error let me do it
         child.material.map.encoding = THREE.sRGBEncoding
 
       // @ts-expect-error let me do it
       if (child.material.emissiveMap)
-      // @ts-expect-error let me do it
+        // @ts-expect-error let me do it
         child.material.emissiveMap.encoding = THREE.sRGBEncoding
 
       // @ts-expect-error let me do it
       if (child.material.map || child.material.emissiveMap)
-      // @ts-expect-error let me do it
+        // @ts-expect-error let me do it
         child.material.needsUpdate = true
     }
   })
@@ -206,7 +206,7 @@ async function load() {
       })
 
       // 7. 对group分组中的所有 scene对象统一缩放
-      group.scale.set(0.05, 0.05, 0.05)
+      group.scale.set(0.045, 0.045, 0.045)
 
       // 8. 进行居中
       const box = new THREE.Box3().setFromObject(group)
@@ -215,7 +215,7 @@ async function load() {
       control.reset()
 
       group.position.x += (group.position.x - center.x)
-      group.position.y += (group.position.y - center.y + 0.5)
+      group.position.y += (group.position.y - center.y + 1.3)
       group.position.z += (group.position.z - center.z)
 
       // 9. 添加进场景
@@ -258,7 +258,7 @@ async function init3d() {
   render()
 }
 
-const stragies: Record<number, () => void> = {
+const strategies: Record<number, () => void> = {
   1: initImg,
   2: init3d,
 }
@@ -266,7 +266,7 @@ const stragies: Record<number, () => void> = {
 async function init(data: CollectionsItem) {
   detail.value = data
 
-  stragies[detail.value?.type]()
+  strategies[detail.value?.type]()
 }
 
 const imgLoaded = () => {
@@ -294,8 +294,12 @@ defineExpose({
       <zo-img :src="detail.modelUrls[0]" bg-color="transparent" @load="imgLoaded" />
     </div>
     <div class="desc">
-      <div class="name">
-        {{ detail.name }}
+      <div class="name flex-center-horizontal">
+        <SvgIcon name="detail-blood-left-cloud" class="icon" />
+        <span>
+          {{ detail.name }}
+        </span>
+        <SvgIcon name="detail-blood-right-cloud" class="icon" />
       </div>
       <div class="tag">
         <span>限量</span>
@@ -372,7 +376,7 @@ defineExpose({
 
   .desc {
     position: absolute;
-    bottom: 0;
+    bottom: 40px;
     left: 50%;
     transform: translateX(-50%);
     width: 295px;
@@ -383,36 +387,44 @@ defineExpose({
 
     .name {
       margin-top: 8px;
-      color: rgba(255, 254, 250, 1);
+      color: #EEDDB2;
       font-size: 20px;
-      @include multi-ellipsis();
+
+      .icon {
+        width: 36px;
+        height: 36px;
+      }
+
+      span {
+        margin: 0 6px;
+      }
     }
 
     .tag {
       font-size: 12px;
-      margin-top: 12px;
+      margin-top: 8px;
 
-      span {
-        padding: 4px 8px;
+      & span:first-child {
+        padding: 2px 4px;
+        color: #5A3E19;
+        border: 1px solid rgba(238, 221, 178, 1);
+        background: linear-gradient(90deg, rgba(236, 192, 143, 1) 0%, rgba(238, 221, 178, 1) 100%);
+        border-radius: 3px 0 0 3px;
+      }
+
+      & span:last-child {
+        padding: 2px 8px;
+        color: #EEDDB2;
+        border: 1px solid rgba(238, 221, 178, 1);
         box-sizing: border-box;
-      }
-
-      span:first-child {
-        color: #303034;
-        background-color: #B2BBBE;
-      }
-
-      span:last-child {
-        padding: 4px 8px;
-        color: #FFFEFA;
-        background-color: #F4CE69;
+        border-radius: 0 3px 3px 0;
       }
     }
 
     .tips {
       margin-top: 13px;
       font-size: 12px;
-      color: #FFFFFF;
+      color: #ECC08F;
       justify-content: center;
       align-items: center;
       line-height: 14px;

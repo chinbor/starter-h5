@@ -85,16 +85,11 @@ getCollection({
           <CollectionDesc :data="detail" />
         </div>
       </div>
-      <div class="purchase-notes">
-        <div class="box">
-          <div class="title">
-            购买须知
-          </div>
-          <div class="content">
-            {{ detail?.purchaseNotes }}
-          </div>
-        </div>
-      </div>
+      <!-- 背景简介 -->
+      <!-- 设计师简介 -->
+      <!-- 作品简介 -->
+      <!-- 权益介绍 -->
+      <!-- 发行说明 -->
       <div class="release-notes">
         <div class="box">
           <div class="title">
@@ -105,12 +100,24 @@ getCollection({
           </div>
           <div class="tags flex">
             <div v-for="tag in detail?.releaseNotes.tags" :key="tag.name" class="tag flex">
-              <SvgIcon :name="tag.icon" class="tag-icon" />
+              <SvgIcon :name="tag.icon" class="tag-icon" color="#EEDDB2" />
               {{ tag.name }}
             </div>
           </div>
         </div>
       </div>
+      <!-- 购买须知 -->
+      <div class="purchase-notes">
+        <div class="box">
+          <div class="title">
+            购买须知
+          </div>
+          <div class="content">
+            {{ detail?.purchaseNotes }}
+          </div>
+        </div>
+      </div>
+      <!-- baidu logo -->
       <div class="logo flex-center-horizontal">
         <SvgIcon name="super-chain-logo" class="logo-icon" />
       </div>
@@ -131,7 +138,7 @@ getCollection({
 
   .three-booth {
     width: 375px;
-    height: 620px;
+    height: 663px;
   }
 
   .desc,

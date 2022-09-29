@@ -52,10 +52,7 @@ defineExpose({
     <div v-for="item in list" :key="item.id" class="card" @click="toDetail(item.id)">
       <div class="img">
         <div class="wrapper">
-          <zo-img
-            lazy
-            src="https://images.pexels.com/photos/8051987/pexels-photo-8051987.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-          />
+          <zo-img lazy :src="item.url" />
           <!-- NOTE: 这里很重要，逻辑一定要仔细看。 handleTag参数为 开售时间、售罄的状态 -->
           <span v-if="item.isSoldOut" class="sold-out tag">已售罄</span>
           <template v-else>
@@ -72,16 +69,17 @@ defineExpose({
         </div>
       </div>
       <div class="footer flex">
-        <div class="title">
-          三国武将系列 赵云三国武将系列 赵云三国武将系列 赵云
+        <div class="title flex-center">
+          {{ item.name }}
+          <SvgIcon v-if="item.type === 2" name="home-collection-3d" class="icon" />
         </div>
         <div class="detail flex">
           <div class="bardge">
             <span>限量</span>
-            <span>10000</span>
+            <span>{{ item.numbers }}件</span>
           </div>
           <div class="price flex">
-            <span>￥</span><span>30.00</span>
+            <span>￥</span><span>{{ item.price }}</span>
           </div>
         </div>
       </div>
@@ -93,11 +91,12 @@ defineExpose({
 .card {
   height: 431px;
   margin-bottom: 16px;
-  background-color: #1A1A1C;
-  animation: fade 0.4s linear;
+  // 页面返回会有闪动效果，所以这里注释
+  // animation: fade 0.4s linear;
   border-radius: 8px;
   overflow: hidden;
-  background: rgba(62, 62, 62, 0.12);
+  background: #491C18;
+  backdrop-filter: blur(4px);
 
   .img {
     padding: 2px;
@@ -105,7 +104,7 @@ defineExpose({
     position: relative;
     width: 100%;
     height: 343px;
-    background-color: rgba(219, 219, 219, 1);
+    background-color: #EEDDB2;
     border-radius: 8px;
 
     .wrapper {
@@ -152,7 +151,7 @@ defineExpose({
   }
 
   .footer {
-    color: #FFFEFA;
+    color: #EEDDB2;
     padding: 16px 16px 12px 16px;
     box-sizing: border-box;
     flex-direction: column;
@@ -161,8 +160,13 @@ defineExpose({
     .title {
       font-size: 20px;
       font-weight: 700;
-      width: 100%;
+      width: 90%;
       @include multi-ellipsis(1);
+
+      .icon {
+        width: 12px;
+        height: 12px;
+      }
     }
 
     .detail {
@@ -175,15 +179,19 @@ defineExpose({
         font-size: 12px;
 
         & span:first-child {
-          padding: 4px 8px;
-          color: #303034;
-          background-color: #B2BBBE;
+          padding: 2px 4px;
+          color: #5A3E19;
+          border: 1px solid rgba(238,221,178,1);
+          background: linear-gradient(90deg, rgba(236,192,143,1) 0%, rgba(238,221,178,1) 100%);
+          border-radius: 3px 0 0 3px;
         }
 
         & span:last-child {
-          padding: 4px 8px;
-          color: #FFFEFA;
-          background-color: #F4CE69;
+          padding: 2px 8px;
+          color: #EEDDB2;
+          border: 1px solid rgba(238,221,178,1);
+          box-sizing: border-box;
+          border-radius: 0 3px 3px 0;
         }
       }
 

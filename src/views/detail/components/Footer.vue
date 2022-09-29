@@ -99,7 +99,7 @@ footer {
   width: 100%;
   padding: 8px 24px 0 24px;
   box-sizing: border-box;
-  background-color: $primary-color;
+  background-color: #180200;
 
   .box {
     height: 44px;
@@ -111,7 +111,7 @@ footer {
       text-overflow: ellipsis; //溢出用省略号显示
       white-space: nowrap; //溢出不换行
       align-items: center;
-      color: #FFFEFA;
+      color: #ECC08F;
       font-size: 12px;
 
       span {
@@ -150,9 +150,9 @@ footer {
             line-height: 44px;
             text-align: center;
             border-radius: 22px;
-            background-color: #FFA60F;
+            background: linear-gradient(130.3deg, rgba(238,221,178,1) 16%, rgba(236,192,143,1) 90%);
             font-size: 18px;
-            color: #FFFEFA;
+            color: #5A3E19;
             letter-spacing: 2px;
             text-indent: 2px;
           }

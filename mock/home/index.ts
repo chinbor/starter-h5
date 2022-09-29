@@ -35,26 +35,39 @@ const collections = [
   {
     id: '1',
     isSoldOut: false,
-    time: 1663646400000,
-    url: 'https://images.pexels.com/photos/8051987/pexels-photo-8051987.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+    time: 1663587687000,
+    url: '/images/yuzhi-token.png',
+    type: 2, // 1：图片 2：3d
+    name: '共创招募令 · 玉',
+    numbers: 9999,
+    price: 99.99,
   },
   {
     id: '2',
     isSoldOut: false,
-    time: 1663646400000,
-    url: 'https://images.pexels.com/photos/8051987/pexels-photo-8051987.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+    time: 1663587687000,
+    url: '/images/jinshu-token.png',
+    type: 2, // 1：图片 2：3d
+    name: '共创招募令 · 金',
+    numbers: 9999,
+    price: 99.99,
   },
   {
     id: '3',
     isSoldOut: false,
-    time: 1663646400000,
-    url: 'https://images.pexels.com/photos/8051987/pexels-photo-8051987.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+    time: 1663587687000,
+    url: '/images/muzhi-token.png',
+    type: 2, // 1：图片 2：3d
+    name: '共创招募令 · 木',
+    numbers: 9999,
+    price: 99.99,
   },
   // {
   //   id: '4',
   //   isSoldOut: false,
   //   time: 1663646400000,
   //   url: 'https://images.pexels.com/photos/8051987/pexels-photo-8051987.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+  //   type: 2, // 1：图片 2：3d
   // },
   // {
   //   id: '5',

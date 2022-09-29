@@ -8,13 +8,13 @@ import { router, setupRouter } from '~/router/index'
 import { setupRouterGuard } from '~/router/guard/index'
 import { initState, setupStore } from '~/stores/index'
 import { setupGlobDirectives } from '~/directives/index'
-import { tracker } from '~/utils/tracker'
+// import { tracker } from '~/utils/tracker'
 
 function bootStrap() {
   const app = createApp(App)
 
   // 埋点 sdk初始化
-  tracker.init()
+  // tracker.init()
 
   // 注册全局指令
   setupGlobDirectives(app)

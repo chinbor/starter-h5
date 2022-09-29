@@ -4,7 +4,7 @@ import type { PropType } from 'vue'
 defineProps({
   bgColor: {
     type: String as PropType<string>,
-    default: '#131824',
+    default: '#360400',
   },
   title: {
     type: String as PropType<string>,
