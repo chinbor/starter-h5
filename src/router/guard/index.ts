@@ -9,7 +9,7 @@ function createProgressGuard(router: Router) {
   router.beforeEach((to) => {
     NProgress.start()
 
-    document.title = to.meta.title ? `${to.meta.title} - 零一数藏平台` : '零一数藏平台'
+    document.title = to.meta.title ? `${to.meta.title} - 三国灵境艺术馆` : '三国灵境艺术馆'
   })
 
   router.afterEach(() => {
