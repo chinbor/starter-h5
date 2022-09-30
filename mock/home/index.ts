@@ -17,17 +17,9 @@ export interface BannerItem {
 const banners: BannerItem[] = [
   {
     type: 1,
-    url: 'https://images.pexels.com/photos/8051987/pexels-photo-8051987.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+    url: '/images/home-banner1.png',
     link: 'https://mp.weixin.qq.com/s/o5tgIgeKKGVA-J5qxhKXtg', // iframe链接地址
     title: '招募令', // iframe 顶部 nav 标题名称
-  },
-  {
-    type: 2,
-    url: 'https://images.pexels.com/photos/10311898/pexels-photo-10311898.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-  },
-  {
-    type: 3,
-    url: 'https://zodance.oss-cn-shenzhen.aliyuncs.com/three-kingdoms/dg-collection/home-banner1.svg',
   },
 ]
 
