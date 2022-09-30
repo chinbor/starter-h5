@@ -25,35 +25,36 @@ const buy = () => {
 }
 
 const share = async () => {
-  const link = `${window.location.protocol}//${window.location.host}/home`
+  Toast.fail('功能正在开发中')
+  // const link = `${window.location.protocol}//${window.location.host}/home`
 
-  posterRef.value.draw(
-    // 跳转到详情页，由于存在返回首页所以需要增加 back=home
-    link,
-    {
-      type: 'jumpDetailPoster',
-      canvasOptions: {
-        width: 375,
-        height: 563,
-        dpr: 1,
-        el: '#myCanvas',
-      },
-      qrcodeOptions: {
-        errorCorrectionLevel: 'H',
-        width: 68,
-        margin: 2,
-        scale: 1,
-        rendererOpts: {
-          quality: 1,
-        },
-        type: 'image/jpeg',
-      },
-    },
-    {
-      headUrl: detail.value?.cover,
-      collectionName: detail.value?.name,
-    },
-  )
+  // posterRef.value.draw(
+  //   // 跳转到详情页，由于存在返回首页所以需要增加 back=home
+  //   link,
+  //   {
+  //     type: 'jumpDetailPoster',
+  //     canvasOptions: {
+  //       width: 375,
+  //       height: 563,
+  //       dpr: 1,
+  //       el: '#myCanvas',
+  //     },
+  //     qrcodeOptions: {
+  //       errorCorrectionLevel: 'H',
+  //       width: 68,
+  //       margin: 2,
+  //       scale: 1,
+  //       rendererOpts: {
+  //         quality: 1,
+  //       },
+  //       type: 'image/jpeg',
+  //     },
+  //   },
+  //   {
+  //     headUrl: detail.value?.cover,
+  //     collectionName: detail.value?.name,
+  //   },
+  // )
 }
 
 getCollection({
@@ -187,7 +188,7 @@ getCollection({
 
   .three-booth {
     width: 375px;
-    height: 663px;
+    height: 613px;
   }
 
   .purchase-notes,

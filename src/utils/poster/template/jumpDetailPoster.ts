@@ -53,7 +53,7 @@ export default function jumpDetailPoster(params: Record<string, any>) {
       fontFamily: 'PingFang SC',
       fontSize: 12,
       color: '#5E616D',
-      text: '扫码打开三国数藏平台',
+      text: '扫码打开三国灵境艺术馆平台',
       bold: '400',
     },
     {

@@ -8,7 +8,7 @@
     <SvgIcon name="home-bg5" class="home-bg5" />
     <SvgIcon name="home-bg6" class="home-bg6" />
     <SvgIcon name="home-bg7" class="home-bg7" />
-    <SvgIcon name="home-bg8" class="home-bg8" />
+    <SvgIcon name="home-bg8" class="home-bg8" color="#280300" />
     <slot />
   </div>
 </template>

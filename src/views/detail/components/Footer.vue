@@ -95,15 +95,19 @@ const buy = () => {
 footer {
   position: fixed;
   bottom: 0;
-  height: 94px;
+  // height: 60px;
   width: 100%;
-  padding: 8px 24px 0 24px;
+  padding: 8px 24px 8px 24px;
   box-sizing: border-box;
   background-color: #180200;
 
   .box {
-    height: 44px;
+    height: 100%;
     justify-content: space-between;
+    // /* 兼容 iOS < 11.2 */
+    padding-bottom: constant(safe-area-inset-bottom);
+    /* 兼容 iOS >= 11.2 */
+    padding-bottom: env(safe-area-inset-bottom);
 
     .left {
       width: 160px;
@@ -150,7 +154,7 @@ footer {
             line-height: 44px;
             text-align: center;
             border-radius: 22px;
-            background: linear-gradient(130.3deg, rgba(238,221,178,1) 16%, rgba(236,192,143,1) 90%);
+            background: linear-gradient(130.3deg, rgba(238, 221, 178, 1) 16%, rgba(236, 192, 143, 1) 90%);
             font-size: 18px;
             color: #5A3E19;
             letter-spacing: 2px;

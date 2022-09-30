@@ -215,7 +215,7 @@ async function load() {
       control.reset()
 
       group.position.x += (group.position.x - center.x)
-      group.position.y += (group.position.y - center.y + 1.3)
+      group.position.y += (group.position.y - center.y + 1.7)
       group.position.z += (group.position.z - center.z)
 
       // 9. 添加进场景
