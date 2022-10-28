@@ -1,3 +1,4 @@
+// @ts-expect-error let me do it
 import sensors from 'sa-sdk-javascript'
 
 function init() {
